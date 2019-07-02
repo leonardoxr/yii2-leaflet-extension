@@ -1,5 +1,5 @@
  "require": {
-        "2amigos/yii2-leaflet-extension": "*"
+        "2amigos/yii2-leaflet-extension": "dev-master"
     },
     "repositories": [
         {
