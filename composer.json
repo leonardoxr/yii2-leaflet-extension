@@ -1,9 +1,9 @@
 {
-    "name": "2amigos/yii2-leaflet-extension",
+    "name": "leonardoxr/yii2-leaflet-extension",
     "description": "LeafLet Mobile-Friendly Interactive Maps Extension Library for Yii2.",
     "type": "yii2-extension",
     "keywords": [
-        "2amigos",
+        "leonardoxr",
         "yii",
         "yii2",
         "extension",
@@ -16,14 +16,14 @@
     "authors": [
         {
             "name": "2amigOS! Consulting Group",
-            "email": "hola@2amigos.us",
-            "homepage": "http://2amigos.us",
+            "email": "hola@leonardoxr.us",
+            "homepage": "http://leonardoxr.us",
             "role": "Developer"
         }
     ],
     "support": {
-        "issues": "https://github.com/2amigos/yii2-leaflet-extension/issues",
-        "source": "https://github.com/2amigos/yii2-leaflet-extension"
+        "issues": "https://github.com/leonardoxr/yii2-leaflet-extension/issues",
+        "source": "https://github.com/leonardoxr/yii2-leaflet-extension"
     },
     "require": {
         "yiisoft/yii2": "^2.0",
