@@ -6,8 +6,10 @@
  */
 namespace dosamigos\leaflet\layers;
 
+use dosamigos\leaflet\LeafLet;
 use dosamigos\leaflet\types\Icon;
 use yii\base\InvalidConfigException;
+use yii\helpers\Json;
 use yii\web\JsExpression;
 
 /**
@@ -67,9 +69,11 @@ class Marker extends Layer
     {
         $latLon = $this->getLatLng()->toArray(true);
         $options = $this->getOptions();
+        $tooltip =  $this->clientOptions['tooltip'];
+        $tooltipOptions = $this->getTooltipOptions();
         $name = $this->name;
         $map = $this->map;
-        $js = $this->bindPopupContent("L.marker($latLon, $options)") . ($map !== null ? ".addTo($map)" : "");
+        $js = $this->bindPopupContent("L.marker($latLon, $options)"). ($tooltip !== null ? ".bindTooltip('$tooltip',$tooltipOptions)" : "") . ($map !== null ? ".addTo($map)" : "") ;
         if (!empty($name)) {
             $js = "var $name = $js;";
         }
