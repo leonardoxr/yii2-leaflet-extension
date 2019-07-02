@@ -1,7 +1,10 @@
-"repositories": [
-
+ "require": {
+        "2amigos/yii2-leaflet-extension": "*"
+    },
+    "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/leonardoxr/yii2-leaflet-extension"
+            "url":  "https://github.com/leonardoxr/yii2-leaflet-extension"
         }
     ]
+	
