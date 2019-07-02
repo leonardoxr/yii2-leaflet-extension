@@ -56,6 +56,25 @@ abstract class Layer extends Component
         return empty($options) ? '{}' : Json::encode($options, LeafLet::JSON_OPTIONS);
     }
 
+    public function getTooltipOptions()
+    {
+        $options = [];
+        if(!empty($this->clientOptions['tooltipOptions']))
+        {
+            foreach ($this->clientOptions['tooltipOptions'] as $key => $option) {
+                if ($option instanceof Type) {
+                    $option = $option->encode();
+                }
+                $options[$key] = $option;
+            }
+            return empty($options) ? '{}' : Json::encode($options, LeafLet::JSON_OPTIONS);
+        }
+        else {
+            return null;
+        }
+    }
+
+
     /**
      * @return string the processed js events
      */
