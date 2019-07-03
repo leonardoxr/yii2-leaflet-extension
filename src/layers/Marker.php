@@ -69,7 +69,7 @@ class Marker extends Layer
     {
         $latLon = $this->getLatLng()->toArray(true);
         $options = $this->getOptions();
-        $tooltip =  $this->clientOptions['tooltip'];
+        $tooltip =  !empty($this->clientOptions['tooltipOptions']) ? $this->clientOptions['tooltip'] : "";
         $tooltipOptions = $this->getTooltipOptions();
         $name = $this->name;
         $map = $this->map;
